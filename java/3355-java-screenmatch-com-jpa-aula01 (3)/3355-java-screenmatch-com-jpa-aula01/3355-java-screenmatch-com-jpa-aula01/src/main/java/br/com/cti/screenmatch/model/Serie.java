@@ -66,6 +66,7 @@ public class Serie {
         this.atores = dadosSerie.atores();
         this.poster = dadosSerie.poster();
         this.sinopse = dadosSerie.sinopse().trim();
+
         this.escritor = dadosSerie.escritor();
         this.idioma = dadosSerie.idioma();
         this.duracao = dadosSerie.duracao();
