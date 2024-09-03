@@ -27,8 +27,37 @@ public class Serie {
     private String poster;
     private String sinopse;
 
+    private String escritor;
+    private String duracao;
+    private String idioma;
+
     @Transient
     private List<Episodio> episodios = new ArrayList<>();
+
+    public String getEscritor() {
+        return escritor;
+    }
+
+    public void setEscritor(String escritor) {
+        this.escritor = escritor;
+    }
+
+    public String getDuracao() {
+        return duracao;
+    }
+
+    public void setDuracao(String duracao) {
+        this.duracao = duracao;
+    }
+
+    public String getIdioma() {
+        return idioma;
+    }
+
+    public void setIdioma(String idioma) {
+        this.idioma = idioma;
+    }
+
     public Serie(DadosSerie dadosSerie){
         this.titulo = dadosSerie.titulo();
         this.totalTemporadas = dadosSerie.totalTemporadas();
@@ -37,6 +66,9 @@ public class Serie {
         this.atores = dadosSerie.atores();
         this.poster = dadosSerie.poster();
         this.sinopse = dadosSerie.sinopse().trim();
+        this.escritor = dadosSerie.escritor();
+        this.idioma = dadosSerie.idioma();
+        this.duracao = dadosSerie.duracao();
     }
 
     public Long getId() {
